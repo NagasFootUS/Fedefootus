@@ -1,0 +1,1046 @@
+
+/*MY CODE*/
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+}
+
+body{
+  background-color: white;
+}
+
+main{
+  padding-top: 100px;
+}
+p{
+  font-weight: bold;
+}
+
+a:link{
+  color: black;
+}
+a:visited{
+  color: black;
+}
+
+table{
+  width: 250px;
+}
+th{
+  text-align: center;
+}
+td{
+  text-align: center;
+  line-height: 20px;
+}
+table, th, td {
+  border: 1px solid black;
+}
+
+tr:nth-child(even) {
+  background-color: #ddd;
+}
+
+tr:nth-child(odd) {
+  background-color: white;
+}
+
+.win {
+  background-color: #90EE90;
+}
+
+.table {
+  padding-bottom: 20px;
+}
+
+.tableclassementnord {
+    padding-bottom: 20px;
+  }
+    .tableclassementsud {
+      padding-bottom: 20px;
+    }
+
+
+.lose {
+  background-color: #F08080;
+}
+
+.tie {
+  background-color: #FFFFE0;
+}
+
+.weekschedulenord {
+  background-color: #00BFFF;
+}
+
+.weekschedulesud {
+  background-color: #FA8072;
+}
+
+.nordschedule {
+  background-color: #FF0000;
+}
+
+.weekschedule {
+  background-color: #87CEFA;
+}
+
+section div article div table .histoireth{
+  background-color: #87CEFA;
+}
+
+
+section div .calendriertitre {
+  padding-bottom: 20px;
+  padding-top: 30px;
+  padding-left: auto;
+}
+
+section div article .tableschedule table{
+  width: 250px;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section div article .tablehistoire table{
+  width: 250px;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section div article .tableclassementnord table{
+  width: 250px;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+section div article .tableclassementsud table{
+  width: 250px;
+  text-align: center;
+  margin: 0 auto;
+}
+section div article table .resultportable{
+  display: none;
+}
+
+
+
+
+@media only screen and (min-width: 1000px) {
+  table {
+    width: 600px;
+  }
+  section div article .tableclassementnord table{
+    width: 800px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  section div article .tableclassementsud table{
+    width: 800px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  section div article .tableschedule table{
+    width: 500px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  section div article .tablehistoire table{
+    width: 500px;
+    text-align: center;
+    margin: 0 auto;
+    border-color: white;
+  }
+  section div .calendriertitre {
+    padding-top: 30px;
+  }
+  section div article table .resultportable{
+    display: table-cell;
+  }
+}
+
+/*contactbox*/
+
+.container{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 100px;
+}
+
+.container:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: url("img/bg.jpg") no-repeat center;
+	background-size: cover;
+	filter: blur(50px);
+	z-index: -1;
+}
+.contact-box{
+	max-width: 850px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+}
+
+.left{
+	background: url("ffsulogo.jpg") no-repeat center;
+	background-size: contain;
+	height: 100%;
+}
+
+.right{
+	padding: 25px 40px;
+}
+
+.contacth2{
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 30px;
+}
+
+.contacth2:after{
+	content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: #87CEFA;
+}
+
+.field{
+	width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
+}
+
+.field:hover{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+textarea{
+	min-height: 150px;
+}
+
+.btn{
+	width: 100%;
+	padding: 0.5rem 1rem;
+	background-color: #87CEFA;
+	color: #fff;
+	font-size: 1.1rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.btn:hover{
+    background-color: #27ae60;
+}
+
+.field:focus{
+    border: 2px solid rgba(30,85,250,0.47);
+    background-color: #fff;
+}
+
+@media screen and (max-width: 880px){
+	.contact-box{
+		grid-template-columns: 1fr;
+	}
+	.left{
+		height: 200px;
+	}
+}
+
+header{
+  width: 100%;
+  height: 100px;
+  background: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 99;
+}
+
+
+header .header-home{
+  font-family: Arial;
+  font-size: 24px;
+  line-height: 58px;
+  color: #111;
+  padding: 20px 0;
+  font-weight: 900;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  background-color: white;
+  text-transform: uppercase;
+}
+
+header nav ul{
+  width: fit-content;
+  display: block;
+  background-color: white;
+}
+
+header nav ul li{
+  float: left;
+  list-style: none;
+  position: relative;
+  display: inline-block;
+  padding: 0 16px;
+  background-color: white;
+}
+
+header nav ul li a {
+  font-family: Arial;
+  color: black;
+  font-size: 14px;
+  padding: 22px 14px;
+  display: block;
+  text-shadow: white 2px 2px 8px;
+  text-decoration: none;
+  background-color: white;
+  text-transform: uppercase;
+}
+
+header nav ul li ul{
+  display: none;
+  position: absolute;
+  background-color: white;
+  padding: 10px;
+  border-radius: 0px 0px 4px 4px;
+  z-index: 1111;
+}
+
+header nav ul li:hover ul{
+  display: block;
+  color: #87CEFA;
+}
+
+
+header nav ul li ul li{
+  width: 130px;
+  border-radius: 4px;
+}
+
+header nav ul li ul li a{
+  padding: 8px 14px;
+}
+
+header nav ul li ul li a:hover{
+  background-color: #87CEFA;
+}
+
+header .header-link{
+  display: none;
+}
+
+@media only screen and (min-width: 1000px) {
+  header .header-home{
+    padding: 0 20px 0 40px;
+    margin: 31px 0;
+    text-align: left;
+    border-right: 3px solid #111;
+    float: left;
+    line-height: 38px;
+  }
+
+  header nav ul{
+    margin: 20px 0px;
+    float: left;
+  }
+
+  header nav ul li{
+    float: left;
+    list-style: none;
+    position: relative;
+    display: inline-block;
+    padding: 20px 16px;
+    padding-top: 2px;
+  }
+
+  header nav ul li a {
+    font-family: Arial;
+    color: black;
+    font-size: 14px;
+    padding: 22px 14px;
+    display: block;
+    text-decoration: none;
+    background-color: white;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  header nav ul li ul{
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    border-radius: 0px 0px 4px 4px;
+    z-index: 1111;
+  }
+  header nav ul li ul li{
+    width: 190px;
+    border-radius: 4px;
+    text-align: center;
+
+  }
+
+  header .header-link{
+    display: block;
+    font-size: 16px;
+    color: black;
+    text-transform: uppercase;
+    line-height: 60px;
+    float: right;
+    border: 1px solid black;
+    margin-right: 40px;
+    padding: 0 20px;
+    margin-top: 20px;
+  }
+}
+
+
+/*Index*/
+
+.index-banner {
+  width: 100%;
+  height: calc(100vh - 300px);
+  background-image: url('kev.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: table;
+  padding-top: 200px;
+  background-color: #d3d3d3;
+}
+
+.index-banner h2{
+  font-size: 60px;
+  color: black;
+  text-align: center;
+  font-weight: 900;
+  text-shadow: white 2px 2px 8px;
+}
+
+.index-text{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.index-box div{
+  margin: 16px 16px 0;
+  width: calc(100% - 32px);
+  height: 100px;
+}
+
+.index-box div h3{
+  font-size: 28px;
+  color: #111;
+  text-align: center;
+  font-weight: 100;
+  line-height: 100px;
+  text-transform: uppercase;
+}
+
+/*News*/
+
+.index-news{
+  width: 100%;
+  overflow: hidden;
+  display: none;
+}
+
+.index-news article{
+  width: 18%;
+  background-color: black;
+  float: left;
+  margin: 0px 1%;
+  display: none;
+}
+
+.news-img1{
+  max-width: 100%;
+  max-height: 100%;
+  height: 200px;
+  background-image: url('melkev.jpg');
+  background-size: cover;
+  }
+
+.news-img2{
+  max-width: 100%;
+  max-height: 100%;
+  height: 200px;
+  background-image: url('ffsulogo.jpg');
+  background-size: cover;
+  }
+
+.news-img3{
+  max-width: 100%;
+  max-height: 100%;
+  height: 200px;
+  background-image: url('melkev.jpg');
+  background-size: cover;
+  }
+
+.news-img4{
+  max-width: 100%;
+  max-height: 100%;
+  height: 200px;
+  background-image: url('melkev.jpg');
+  background-size: cover;
+  }
+
+.news-img5{
+  max-width: 100%;
+  max-height: 100%;
+  height: 200px;
+  background-image: url('melkev.jpg');
+  background-size: cover;
+  }
+
+  .index-news h3{
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-transform: uppercase;
+    color: white;
+    display: none;
+  }
+  .index-news p{
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    padding-bottom: 10px;
+    color: white;
+    display: none;
+  }
+
+@media only screen and (min-width: 1000px) {
+
+  .index-banner {
+    width: 100%;
+    height: 400px;
+    background-image: url('kev.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: table;
+    padding-top: 0;
+  }
+
+  .index-box div{
+    margin: 10px 10px 0;
+    width: calc(100% - 32px);
+    height: 100px;
+    background-color: #f2f2f2;
+  }
+
+.index-news{
+  width: 100%;
+  background-color: #f3f3f3;
+  overflow: hidden;
+  padding: 80px 0;
+  display: block;
+}
+
+.index-news article{
+  width: 18%;
+  background-color: black;
+  float: left;
+  margin: 0px 1%;
+  display: block;
+}
+.index-news h3{
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-transform: uppercase;
+  color: white;
+  display: block;
+}
+.index-news p{
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  padding-bottom: 10px;
+  color: white;
+  display: block;
+}
+.index-box{
+  margin-bottom: 30px;
+}
+}
+
+/*Teams Page*/
+
+.wrapperteams{
+  width: 400px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.teamsbox .wrapperteams div{
+  width: 190px;
+  height: 190px;
+  margin: 10px 5px 0px;
+  float: left;
+}
+
+ .teamsbox{
+   overflow: hidden;
+   margin-bottom: 30px;
+   margin-top: 100px;
+ }
+
+ .teamsbox h2{
+   font-size: 28px;
+   font-weight: 600;
+   color: black;
+   text-transform: uppercase;
+   text-align: center;
+   margin-top: 10px;
+ }
+
+ .teamsbox .wrapperteams p{
+   font-size: 30px;
+   text-align: center;
+   vertical-align: middle;
+   text-transform: uppercase;
+   font-weight: 900;
+   padding-top: 75%;
+   text-shadow: black 4px 4px 8px;
+   color: white;
+ }
+
+ .teamsbox .wrapperteams .bears img{
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 100%;
+   height: 91%;
+   background-position: center;
+   display: table;
+ }
+
+ .teamsbox .wrapperteams .castors p{
+   background-image: url('castorslogo.png');
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 100%;
+   background-position: center;
+   display: table;
+ }
+
+ .teamsbox .wrapperteams .crocos p{
+   background-image: url('crocoslogo.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 100%;
+   background-position: center;
+   display: table;
+ }
+
+ .teamsbox .wrapperteams .eagles img{
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 100%;
+   height: 91%;
+   background-position: center;
+   display: table;
+ }
+
+ .teamsbox .wrapperteams .nagas p{
+   background-image: url('nagaslogo.png');
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 100%;
+   background-position: center;
+   display: table;
+ }
+
+ .teamsbox .wrapperteams .outlaws p{
+   background-image: url('amulogo.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 100%;
+   background-position: center;
+   display: table;
+ }
+
+ .teamsbox .wrapperteams .raptors p{
+   background-image: url('raptorslogo.png');
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 100%;
+   background-position: center;
+   display: table;
+ }
+
+ .teamsbox .wrapperteams .rockets img{
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 100%;
+   height: 91%;
+   background-position: center;
+   display: table;
+ }
+
+ .teamsbox .wrapperteams .snakes img{
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 100%;
+   height: 91%;
+   background-position: center;
+   display: table;
+ }
+
+ .teamsbox .wrapperteams .stunners p{
+   background-image: url('stunnerslogo.png');
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 100%;
+   background-position: center;
+   display: table;
+ }
+
+ @media only screen and (min-width: 1000px) {
+
+   .wrapperteams{
+     width: 1000px;
+     margin: 0 auto;
+   }
+   .teamsbox{
+     overflow: hidden;
+     margin-bottom: 30px;
+     margin-top: 30px;
+   }
+ }
+ /*Teams Pages*/
+
+.teams-intro h2{
+  font-size: 28px;
+  font-weight: 600;
+  color: black;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.teams-intro img{
+  margin: 0 auto;
+  display: block;
+  padding: 30px 0;
+  width: 350px;
+}
+
+.teams-intro article h3{
+  font-size: 28px;
+  font-weight: 600;
+  color: black;
+  text-transform: uppercase;
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
+
+.teams-intro article div p{
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  color: black;
+  margin-top: 10px;
+  column-count: 1;
+  margin: 0 auto;
+  padding: 20px;
+  width: 300px;
+}
+.teams-intro{
+  margin-top: 120px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 1000px) {
+
+  .teams-intro article div p{
+    column-count: 3;
+    column-gap: 30px;
+    font-size: 16px;
+    width: 1000px;
+    column-rule: 2px solid #87CEFA;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .teams-intro img{
+    width: 750px;
+  }
+  .teams-intro{
+    margin-top: 30px;
+  }
+  .teams-intro div article .allprotext div .pro2{
+    overflow: auto;
+    width: 500px;
+    column-count: 2;
+    overflow: auto;
+    float: right;
+    display: inline-block;
+    margin-top: 15%;
+
+  }
+  .teams-intro div article .allprotext .prodaybears{
+    width: 500px;
+    overflow: auto;
+    float: right;
+    text-shadow: black 2px 2px 8px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .teams-intro div article .allprotext .pro1{
+    overflow: auto;
+    width: 500px;
+    column-count: 2;
+    overflow: auto;
+    float: left;
+    display: inline-block;
+    margin-top: 15%;
+
+  }
+  .teams-intro div article .allprotext .prodaysnakes{
+    width: 500px;
+    overflow: auto;
+    float: left;
+    text-shadow: black 2px 2px 8px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .teams-intro div article .allprotext .pro11{
+    overflow: auto;
+    width: 500px;
+    column-count: 3;
+    overflow: auto;
+    float: left;
+    display: inline-block;
+    margin-top: 5%;
+
+  }
+
+
+}
+
+/*Footer*/
+
+footer{
+  width: calc(100% - 40px);
+  margin-top: 20px
+  background-color: black;
+  overflow: hidden;
+  position: static;
+}
+
+footer ul{
+  width: fit-content;
+  float: left;
+  padding-left: 20px;
+}
+
+footer ul li{
+  display: block;
+  list-style: none;
+  line-height: 20px;
+  color: white;
+  overflow: auto;
+}
+
+footer ul li a{
+  font-size: 40px;
+  color: black;
+  line-height: 20px;
+  position: relative;
+  z-index: 1;
+  clear: both;
+  margin: 0 0;
+  padding: 0;
+}
+
+.footer-sm{
+  width: 50px;
+  float: left;
+}
+
+.footer-sm img{
+  width: 100%;
+  margin-top: 20px;
+  margin-left: 150px;
+}
+.footerffsu{
+  display: none;
+  z-index: 2;
+}
+
+.minilogobanner img{
+  width:100px;
+  display: block;
+  float: left;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+@media only screen and (min-width: 1000px) {
+  .footerffsu{
+    background-color: black;
+    width: 1350px;
+    float: left;
+    margin-left: 10px;
+    display: block;
+  }
+  .footer-sm{
+    width: 50px;
+    float: left;
+  }
+
+  .footer-sm img{
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 30px;
+  }
+  .minilogobanner{
+    display: none;
+  }
+}
+
+
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:middle;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
